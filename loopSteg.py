@@ -7,8 +7,6 @@ test_fileTXT = "./test/secret.txt"
 test_fileJPG = "./test/f_f_a.jpg"
 test_keys = "./test/wordlist.txt"
 
-archivoContenedor = "C:\\Users\\eyver-dev\\Documents\\HTB\\Challenges\\Stego\\SenselessBehaviour\\meow.wav"
-
 keys = "C:\\Users\\eyver-dev\\Documents\\python\\loopSteg\\rockyou.txt"
 response = -1
 resA = 'wrote extracted data to "secret.txt".'
@@ -46,15 +44,14 @@ def status(response, k):
 # ============================
 def test(codOP):
 	if (codOP == 1):
-		key = test_keys[3]
-		comando_01(
+		ocultar(
 			test_fileJPG,
 			test_fileTXT,
 			key
 		)#ENCRYPT
 		print ('encryptado ::', key)
 	if (codOP == 2):
-		comando_02(
+		des_ocultar(
 			test_fileJPG, test_keys
 		)#DECRYPT
 # ============================
@@ -91,8 +88,8 @@ print ('Requisitos :: [archivo jpg a ser el contenedor] en una variable, con la 
 print ('1 :: ENCRYPT')
 print ('2 :: DECRYPT LOOP')
 codOP = int(input('\nElige tu opcion :: '))
-#test(codOP)
-operacion(codOP)
+test(codOP)
+#operacion(codOP)
 
 
 
