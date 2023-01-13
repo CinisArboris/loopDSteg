@@ -1,2 +1,2 @@
 # loopDSteg
-Automatizar stegohide : reocrrer una imagen, para guardar informacion.
+Automatizar stegohide : ocultar un archivo secreto en un archivo de imagen
